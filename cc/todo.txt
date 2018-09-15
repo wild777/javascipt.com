@@ -1,0 +1,37 @@
+
+做todo项目时，Restful API框架，rest是表现层状态转译，每个HTTP请求之间对资源变化影响，把资源的变化方式通过一套完整的架构的方式进行梳理
+
+URI统一的资源定位符的缩写，让API的操作都是针对资源的操作，对应HTTP语义进行资源的操作，GET（SELECT ALL）：/api/todos，
+PUT（UPDATE）：/api/todos/:id，返回更新的todo项目
+
+做todo项目时，对Restful API的支持用到了express，
+express最重要的是中间件，HTTP请求和api调用的中间，请求和响应在这些中间件中迭代，加工，就可以产生我们想要的响应
+
+针对路由层面的中间件，
+app.get('/', function(req, res, next) {	//app调用get方法，
+next();
+
+})
+app.listen(3000);
+----
+//对于首页渲染的返回
+app.get('/', (req, res, next) => {
+    res.render('index');
+});
+
+// 获取所有todos
+app.get('api/todos', (req, res, next) => {
+    res.json(todos);
+});
+
+// 获取单个todo
+app.get('api/todos:/id', (req, res, next) => {
+    const searchTodo = todos.filter(todo => todo.id == req.params.id)[0];
+    res.json(todos);
+});
+
+
+
+
+
+
