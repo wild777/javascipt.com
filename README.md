@@ -8,7 +8,7 @@ cc文件是node介绍，和我做过的东西介绍
 
 4、todo.text文件是介绍了我在做todo项目时，用到的一些东西，当时是和同学一起做的
      做todo项目时，Restful API框架，rest是表现层状态转译，每个HTTP请求之间对资源变化影响，把资源的变化方式通过一套完整的架构的方式进行梳理
-     做todo项目时，对Restful API的支持用到了express，有人说它是一个服务端库，有人说它是一个框架
+     做todo项目时，对Restful API的支持用到了express
      express最重要的是中间件，是针对路由层面的中间件
 
 
